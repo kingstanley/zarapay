@@ -1,7 +1,3 @@
-# zarapay
+ # zarapay
+ We are bringiing the best bill payment experience and more
 
-A new Flutter project.
-
-## Getting Started
-We are bringiing the best bill payment experience and more
-# zarapay
