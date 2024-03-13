@@ -31,6 +31,8 @@ class _EmailVerificationPageState extends State<EmailVerificationPage> {
   }
 
   Widget build(BuildContext context) {
+    // FocusScope.of(context).requestFocus(focusNodes[0]);
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Email Verification'),
@@ -79,6 +81,7 @@ class _EmailVerificationPageState extends State<EmailVerificationPage> {
                     width: 50,
                     child: TextField(
                       maxLength: 1,
+                      keyboardType: TextInputType.number,
                       controller: controllers[index],
                       focusNode: focusNodes[index],
                       onChanged: (value) {
