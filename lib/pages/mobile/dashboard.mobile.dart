@@ -16,7 +16,7 @@ class _DashboardMobilePageState extends State<DashboardMobilePage> {
   int _currentIndex = 0;
   final List<Widget> _pages = [
     const DHomePage(),
-    const SendPage(),
+    SendPage(),
     const PayPage(),
     const MoreOptionPage(),
   ];
@@ -28,23 +28,25 @@ class _DashboardMobilePageState extends State<DashboardMobilePage> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
+          if (_currentIndex != index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          }
         },
         items: [
           BottomNavigationBarItem(
             backgroundColor: Theme.of(context).primaryColor,
             icon: Column(
               children: [
-                Icon(Icons.home),
+                const Icon(Icons.home),
                 Text(
                   'Home',
                   style: TextStyle(
                       fontWeight: _currentIndex == 0
                           ? FontWeight.bold
                           : FontWeight.normal,
-                      fontSize: 16,
+                      fontSize: 12,
                       color: Colors.white,
                       backgroundColor: Colors.transparent),
                 ),
@@ -55,14 +57,14 @@ class _DashboardMobilePageState extends State<DashboardMobilePage> {
           BottomNavigationBarItem(
             icon: Column(
               children: [
-                Icon(Icons.send),
+                const Icon(Icons.send),
                 Text(
                   'Transfer',
                   style: TextStyle(
                       fontWeight: _currentIndex == 1
                           ? FontWeight.bold
                           : FontWeight.normal,
-                      fontSize: 16,
+                      fontSize: 12,
                       color: Colors.white,
                       backgroundColor: Colors.transparent),
                 ),
@@ -73,14 +75,14 @@ class _DashboardMobilePageState extends State<DashboardMobilePage> {
           BottomNavigationBarItem(
             icon: Column(
               children: [
-                Icon(Icons.payment),
+                const Icon(Icons.payment),
                 Text(
                   'Pay',
                   style: TextStyle(
                       fontWeight: _currentIndex == 2
                           ? FontWeight.bold
                           : FontWeight.normal,
-                      fontSize: 16,
+                      fontSize: 12,
                       color: Colors.white,
                       backgroundColor: Colors.transparent),
                 ),
@@ -91,14 +93,14 @@ class _DashboardMobilePageState extends State<DashboardMobilePage> {
           BottomNavigationBarItem(
             icon: Column(
               children: [
-                Icon(Icons.more_horiz),
+                const Icon(Icons.more_horiz),
                 Text(
                   'More',
                   style: TextStyle(
                       fontWeight: _currentIndex == 3
                           ? FontWeight.bold
                           : FontWeight.normal,
-                      fontSize: 16,
+                      fontSize: 12,
                       color: Colors.white,
                       backgroundColor: Colors.transparent),
                 ),

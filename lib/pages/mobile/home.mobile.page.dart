@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class HomeMobilePage extends StatelessWidget {
   final PageController _pageController = PageController();
 
@@ -177,7 +178,8 @@ class HomeMobilePage extends StatelessWidget {
               children: [
                 IconButton(
                     onPressed: () {},
-                    icon: const Image(image: AssetImage('assets/gogleicon.png'))),
+                    icon:
+                        const Image(image: AssetImage('assets/gogleicon.png'))),
                 const SizedBox(
                   width: 50.0,
                 ),

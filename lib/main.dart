@@ -10,6 +10,7 @@ import 'package:zarapay/pages/error.page.dart';
 import 'package:zarapay/pages/home.page.dart';
 import 'package:zarapay/pages/pay.page.dart';
 import 'package:zarapay/pages/profile.page.dart';
+import 'package:zarapay/pages/set_transaction_pin.page.dart';
 import 'package:zarapay/pages/signup.page.dart';
 import 'package:zarapay/pages/transactions.page.dart';
 import 'package:zarapay/pages/unknownroute.page.dart';
@@ -64,7 +65,8 @@ class MyApp extends StatelessWidget {
         '/contactus': (context) => const ContactusPage(),
         '/aboutus': (context) => const AboutusPage(),
         '/dashboard': (context) => const DashboardPage(),
-        '/verify-email': (context) => const EmailVerificationPage()
+        '/verify-email': (context) => const EmailVerificationPage(),
+        '/setpin': (context) => const SetTransactionPage()
       },
       onUnknownRoute: (settings) {
         return MaterialPageRoute(

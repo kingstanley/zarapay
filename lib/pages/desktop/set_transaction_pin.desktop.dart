@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class DHomeDesktopPage extends ConsumerWidget {
-  const DHomeDesktopPage({super.key});
+class SetTransactionDesktop extends ConsumerWidget {
+  const SetTransactionDesktop({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return const Center(
-      child: Text('D Home desktop'),
+      child: Text('Set PIN Page Desktop'),
     );
   }
 }

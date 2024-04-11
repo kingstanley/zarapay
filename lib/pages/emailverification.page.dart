@@ -30,6 +30,7 @@ class _EmailVerificationPageState extends State<EmailVerificationPage> {
     super.dispose();
   }
 
+  @override
   Widget build(BuildContext context) {
     // FocusScope.of(context).requestFocus(focusNodes[0]);
 
@@ -60,7 +61,7 @@ class _EmailVerificationPageState extends State<EmailVerificationPage> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               const Text(
@@ -70,7 +71,7 @@ class _EmailVerificationPageState extends State<EmailVerificationPage> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Row(
@@ -109,14 +110,14 @@ class _EmailVerificationPageState extends State<EmailVerificationPage> {
                   );
                 }),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 40.0,
               ),
               TextButton(
                   onPressed: () {
                     print('resend code clicked');
                   },
-                  child: Text('Resend Code'))
+                  child: const Text('Resend Code'))
             ],
           ),
         ),
@@ -128,6 +129,6 @@ class _EmailVerificationPageState extends State<EmailVerificationPage> {
     // Implement your logic to post the values as a token string here
     String token = controllers.map((controller) => controller.text).join();
     print('Token: $token');
-    Navigator.pushNamed(context, '/dashboard');
+    Navigator.pushNamed(context, '/setpin');
   }
 }
